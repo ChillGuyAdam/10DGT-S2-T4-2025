@@ -1,7 +1,7 @@
 #Creating an input system for our coffee prgram
 #Author: André Vorster
 #Date: 10/10/25
-#Version: 1.0
+#Version: 3.0
 
 #  TODO:Ask the user if they like coffee 
 #       Record the answer
@@ -25,9 +25,11 @@ while keepGoing == "":
 
     if likeCoffee == "Yes": 
         print("That is great! I like coffee too!")
+        keepGoing = "Finished"
 
     elif likeCoffee == "No":
         print("That's ok!")
-
-    else:
+        keepGoing = "Finished"
+    else: 
         print("I don't understand. Please answer with Yes or No")
+
