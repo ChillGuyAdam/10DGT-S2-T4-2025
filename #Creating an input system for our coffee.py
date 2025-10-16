@@ -1,7 +1,7 @@
 #Creating an input system for our coffee prgram
 #Author: André Vorster
-#Date: 10/10/25
-#Version: 3.0
+#Date: 17/10/25
+#Version: 4.0 
 
 #  TODO:Ask the user if they like coffee 
 #       Record the answer
@@ -15,7 +15,7 @@ if LikeCoffee == "yes" or "Yes" or "YES":
     print("That is great!I like coffee too!")
 
 else: 
-    print("That's ok!")'''
+    print("That's ok!")
 
 #Version 2
 #While loop
@@ -31,5 +31,30 @@ while keepGoing == "":
         print("That's ok!")
         keepGoing = "Finished"
     else: 
-        print("I don't understand. Please answer with Yes or No")
+        print("I don't understand. Please answer with Yes or No")'''
 
+#Version 4
+#Making the program more pythonic
+
+keep_going = ""
+while keep_going == "":
+    #Convert answer to lower case using .lower()
+    like_coffee = input("Do you like coffee?  ").lower()
+    if like_coffee == "yes" or like_coffee == "y": 
+        print("That's great")
+
+    elif like_coffee == "no" or like_coffee == "n":
+        print("Thats too bad!") 
+
+        like_tea = input("Do you like tea instead? ").upper() #convert input into an upper case using .upper()
+        if like_tea == "YES" or like_tea == "Y": 
+            print("Good for you")
+
+        elif like_tea == "NO" or like_tea == "N": 
+            print("well dang")
+    #Error message
+    else: 
+        print("I dont understand. Please answer with either Yes or No.")
+
+    keep_going = input("Press any key and say enter to close program.")
+        
