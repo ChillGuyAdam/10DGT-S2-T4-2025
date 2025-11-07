@@ -4,7 +4,7 @@
 #Version: 1.1
 #Main routine starts here 
 keep_going = ""
-error = "Please enter an number (higher than 0)\n"
+error = "Please enter an number higher than 0\n"
 width = 0 
 while keep_going == "": 
     while width <= 0:
